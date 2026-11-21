@@ -21,7 +21,9 @@ NordicRent is a rental management API for managing customers, equipment, depots 
    npm install
 
 3. Create a `.env` file based on `.env.example`.
-4. Add your database credentials and configuration to the `.env` file.
+4. Update the `.env` file with your own MySQL and MongoDB connection details.
+
+Note: The .env file is not included in the repository for security reasons. The .env.example file contains a template with the required environment variables.
 
 ## Database Setup
 
