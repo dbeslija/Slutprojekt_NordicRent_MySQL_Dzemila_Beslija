@@ -1,0 +1,21 @@
+MongoDB – Equipment condition reports
+
+MongoDB is used to store flexible equipment condition reports in the reports collection.
+
+Each document contains:
+
+equipmentId: References the equipment ID in MySQL.
+
+notes: A text description of the equipment condition.
+
+checklist: An array containing inspection points.
+
+damageFlag: A boolean indicating whether damage was found.
+
+createdAt: The date and time when the report was created.
+
+MongoDB is suitable for this data because condition reports can contain flexible and nested information. For example, different reports may have different numbers of checklist items or different descriptions.
+
+The equipmentId field creates a logical reference to the equipment table in MySQL. However, MongoDB does not enforce a MySQL foreign key relationship. The Express application therefore checks that the equipment exists in MySQL before saving a report.
+
+No distributed transaction between MySQL and MongoDB is required for this project.

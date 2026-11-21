@@ -1,0 +1,11 @@
+use("nordicrent");
+
+// Create a test report document
+db.reports.insertOne({
+    equipmentId: 12,
+    notes: "Scratch on the side",
+    damageFlag: true
+});
+
+// Display all reports
+db.reports.find();
